@@ -1,0 +1,86 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+[ topic-person statistics ]
+if
+  ( the document D is on the topic T ) and
+  ( the person P wrote the document D )
+then
+  ( there is an topic-person statistic named TPS_#topic-person-stat:_$T_#-_$P ) and
+  ( the topic-person statistic TPS has the topic T as topic ) and
+  ( the topic-person statistic TPS has the person P as person ) and
+  ( the topic-person statistic TPS has the document D as document )
+.
+
+[ topic-organisation statistics ]
+if
+  ( the document D is on the topic T ) and
+  ( the person P wrote the document D ) and
+  ( the person P writes documents for the organisation O )
+then
+  ( there is an topic-organisation statistic named TOS_#topic-org-stat:_$T_#-_$O ) and
+  ( the topic-organisation statistic TOS has the topic T as topic ) and
+  ( the topic-organisation statistic TOS has the organisation O as organisation ) and
+  ( the topic-organisation statistic TOS has the document D as document )
+.
+
+[ topic statistic to topic ]
+if
+  ( the topic statistic TS has the topic T as topic )
+then
+  ( the topic T has the topic statistic TS as topic statistic )
+.
+
+[ topic-person statistic to person ]
+if
+  ( the topic-person statistic TPS has the person P as person )
+then
+  ( the person P has the topic-person statistic TPS as topic-person statistic )
+.
+
+[ topic-organisation statistic to organisation ]
+if
+  ( the topic-organisation statistic TOS has the organisation O as organisation )
+then
+  ( the organisation O has the topic-organisation statistic TOS as topic-organisation statistic )
+.
+
+[ topic number of documents]
+if
+  ( the document #AD is on the topic T )
+then
+  ( the topic T has the value #AD as number of documents )
+.
+
+[ topic number of external documents]
+if
+  ( the external document #AD is on the topic T )
+then
+  ( the topic T has the value #AD as number of external documents )
+.
+
+[ topic number of authors ]
+if
+  ( the person #P writes about the topic T )
+then
+  ( the topic T has the value #P as number of authors )
+.
+
+[ topic number of organisations ]
+if
+  ( the topic-organisation statistic TOS has the organisation #O as organisation ) and
+  ( the topic-organisation statistic TOS has the topic T as topic ) and
+then
+  ( the topic T has the value #O as number of organisations )
+.
+
+[ topic citation count ]
+if
+  ( the document AD is on the topic T ) and
+  ( the document AD has the latest paper citation count PC as citation count ) and
+  ( the latest paper citation count PC has the value @CC as citation count )
+then
+  ( the topic T has the value @CC as citation count )
+.

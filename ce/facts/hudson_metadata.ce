@@ -1,0 +1,8 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+the entity concept 'document' is a separately identified concept.
+
+the property concept 'document:title:value' is an identification property concept.

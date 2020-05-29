@@ -1,0 +1,219 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+[ 1a-ordered author author organisation ]
+if
+  ( the ordered author OA has the person P as author person ) and
+  ( the ordered author OA has no organisation O1 as author organisation ) and
+  ( the person P has the organisation O2 as default organisation )
+then
+  ( the ordered author OA has the organisation O2 as author organisation )
+.
+
+[ 1a-person overall citation count ]
+if
+  ( the person P has the latest person citation count PC as citation count ) and
+  ( the latest person citation count PC has the value CC as citation count )
+then
+  ( the person P has the value CC as overall citation count )
+.
+
+[ 1a-person overall h-index ]
+if
+  ( the person P has the latest person citation count PC as citation count ) and
+  ( the latest person citation count PC has the value HI as h-index )
+then
+  ( the person P has the value HI as overall h-index )
+.
+
+[ 1b-person writes documents for ]
+if
+  ( the ordered author OA has the person P as author person ) and
+  ( the ordered author OA has the organisation O as author organisation )
+then
+  ( the person P writes documents for the organisation O )
+.
+
+[ 1b-person wrote document ]
+if
+   ( the ordered author V3 has the person V1 as author person ) and
+   ( the document V4 has the ordered author V3 as author )
+then
+   ( the published person V1 wrote the document V4 )
+.
+
+[ 1c-core person ]
+if
+  ( the person P writes documents for the core organisation O )
+then
+  ( the person P is a core person )
+.
+
+[ 1c-government person ]
+if
+  ( the person P writes documents for the government organisation O ) and
+then
+  ( the person P is a government person )
+.
+
+[ 1c-industry person ]
+if
+  ( the person P writes documents for the industrial organisation O ) and
+then
+  ( the person P is an industry person )
+.
+
+[ 1c-academic person ]
+if
+  ( the person P writes documents for the academic organisation O ) and
+then
+  ( the person P is an academic person )
+.
+
+[ 1c-US person ]
+if
+  ( the person P writes documents for the US organisation O ) and
+then
+  ( the person P is a US person )
+.
+
+[ 1c-UK person ]
+if
+  ( the person P writes documents for the UK organisation O ) and
+then
+  ( the person P is a UK person )
+.
+
+[ 1c-person document count ]
+if
+  ( the person P wrote the document #D )
+then
+  ( the person P has #D as document count )
+.
+
+[ 1c-person external document count ]
+if
+  ( the person P wrote the external document #ED )
+then
+  ( the person P has #ED as external document count )
+.
+
+[ 1c-person internal document count ]
+if
+  ( the person P wrote the internal document #ID )
+then
+  ( the person P has #ID as internal document count )
+.
+
+[ 1c-person journal paper count ]
+if
+  ( the person P wrote the journal paper #J )
+then
+  ( the person P has #J as journal paper count )
+.
+
+[ 1c-person patent count ]
+if
+  ( the person P wrote the patent #P )
+then
+  ( the person P has #P as patent count )
+.
+
+[ 1c-person conference paper count ]
+if
+  ( the person P wrote the conference paper #CP )
+then
+  ( the person P has #CP as conference paper count )
+.
+
+[ 1c-person external conference paper count ]
+if
+  ( the person P wrote the external conference paper #CP )
+then
+  ( the person P has #CP as external conference paper count )
+.
+
+[ 1c-person internal conference paper count ]
+if
+  ( the person P wrote the internal conference paper #CP )
+then
+  ( the person P has #CP as internal conference paper count )
+.
+
+[ 1c-person technical report count ]
+if
+  ( the person P wrote the technical report #TR )
+then
+  ( the person P has #TR as technical report count )
+.
+
+[ 1c-person other document count ]
+if
+  ( the person P wrote the other document #OD )
+then
+  ( the person P has #OD as other document count )
+.
+
+[ 1c-co-authors ]
+if
+  ( the person P1 wrote the document A ) and
+  ( the person P2 wrote the document A ) and
+  ( the person P1 != the person P2 )
+then
+  ( the person P1 has the person P2 as co-author )
+.
+
+[ 1d-person writes about topic ]
+if
+   ( the person P wrote the document AD ) and
+   ( the document AD is on the topic T )
+then
+   ( the person P writes about the topic T )
+.
+
+[ 1d-person writes for project ]
+if
+   ( the person P wrote the document AD ) and
+   ( the document AD has the project PR as project )
+then
+   ( the person P writes for the project PR )
+.
+
+[ 1d-inv co-author ]
+if
+  ( the person P1 has the person P2 as co-author )
+then
+  ( the person P2 has the person P1 as co-author )
+.
+
+[ 1e-co-author statistics ]
+if
+  ( the person P1 has the person P2 as co-author )
+then
+  ( there is a co-author statistic named CS_#co-author-stat:_$P1_#-_$P2 that ) and
+  ( the co-author statistic CS has the published person P1 as main-author ) and
+  ( the co-author statistic CS has the published person P2 as co-author )
+.
+
+[ 1e-person co-author count ]
+if
+  ( the person P1 has the person #P2 as co-author )
+then
+  ( the person P1 has #P2 as co-author count )
+.
+
+[ 1e-person government co-author count ]
+if
+  ( the person P1 has the government person #P2 as co-author )
+then
+  ( the person P1 has #P2 as government co-author count )
+.
+
+[ 1f-person co-author statistics ]
+if
+  ( the co-author statistic CS has the published person P as main-author )
+then
+  ( the published person P has the co-author statistic CS as co-author statistic )
+.

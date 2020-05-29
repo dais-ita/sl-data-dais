@@ -1,0 +1,33 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+perform load sentences from url '/sl-data-dais/ce/model/agent.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/author.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/organisation.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/person.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/document.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/programme.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/project.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/statistics.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/location.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/event.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/date.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/citation.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/topic.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/misc.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/queries/visualisation_queries.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/queries/consistency_queries.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/linguistic_metamodel.ce'.
+
+perform load sentences from url '/sl-data-dais/ce/model/rules/date.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/rules/document.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/rules/event.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/rules/organisation.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/rules/person.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/rules/project.ce'.
+perform load sentences from url '/sl-data-dais/ce/model/rules/topic.ce'.
+
+-- Load the agent definitions
+perform load sentences from url '/sl-data-dais/ce/agents/agents.ce'.

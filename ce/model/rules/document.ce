@@ -1,0 +1,60 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+[ 1a-document number of citations ]
+if
+  ( the document AD has the latest paper citation count PC as citation count ) and
+  ( the latest paper citation count PC has the value CC as citation count )
+then
+  ( the document AD has the value CC as number of citations )
+.
+
+[ 1a-document topics ]
+if
+  ( the topic T has the value M as marker ) and
+  ( the document AD has the value AB as abstract ) and
+  ( the value AB contains the value M )
+then
+  ( the document AD is on the topic T )
+.
+
+[ 1a-document variants ]
+if
+  ( the document D1 has the document D2 as variant ) and
+  ( the value D1 != D2 )
+then
+  ( the document D2 has the document D1 as variant )
+.
+
+[ 1b-document publication year ]
+if
+  ( the document AD has the date FD as final date ) and
+  ( the date FD has the value Y as year )
+then
+  ( the document AD has the year Y as publication year )
+.
+
+[ 1c-document author count ]
+if
+  ( the person #P wrote the document AD )
+then
+  ( the document AD has #P as number of authors )
+.
+
+[ 1c-government document ]
+if
+  ( the government person P wrote the external document D )
+then
+  ( the external document D is a government document )
+.
+
+[ 1c-cross-project document ]
+if
+  ( the document D has the project P1 as project ) and
+  ( the document D has the project P2 as project ) and
+  ( the project P1 != the project P2 )
+then
+  ( the document D is a cross-project document )
+.

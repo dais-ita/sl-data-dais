@@ -1,0 +1,92 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+[ people with profile pictures ]
+for which P and PP is it true that
+  ( the published person P has the value PP as profile picture ).
+
+[ people with no profile pictures ]
+for which P is it true that
+  ( the published person P has no value PP as profile picture ).
+
+[ people with no google scholar profile ]
+for which P is it true that
+  ( the published person P has the latest person citation count C as citation count ) and
+  ( the latest person citation count C has no value U as url ).
+
+[ TEST-broken papers - no citation ]
+for which D is it true that
+  ( the document D has no paper citation count PC as citation count ).
+
+[ TEST-broken people - no citation ]
+for which PP is it true that
+  ( the published person PP has no person citation count PC as citation count ).
+
+[ TEST-broken authors ]
+for which P is it true that
+    ( the published person P wrote no document V2)
+order by P.
+
+[ TEST-broken events ]
+for which E is it true that
+    ( the event E occurs at no place P )
+order by E.
+
+[ TEST-broken dates - no month ]
+for which D is it true that
+  ( the date D has no value M as month ).
+
+[ TEST-broken dates - no year ]
+for which D is it true that
+  ( the date D has no value Y as year ).
+
+[ TEST-broken documents - no final date ]
+for which DO is it true that
+    ( the document DO has no date DA as final date )
+order by DO.
+
+[ TEST-broken people - surname ]
+for which P is it true that
+  ( the person P has no value _SN as surname )
+order by P.
+
+[ TEST-broken people - full name ]
+for which P is it true that
+  ( the person P has no value _FN as full name )
+order by P.
+
+[ TEST-broken organisations - no authors ]
+for which O is it true that
+  ( the organisation O employs no person P )
+order by O.
+
+[ TEST-missing paper thumbnail ]
+for which D is it true that
+  ( the document D has the value PF as paper file ) and
+  ( the document D has no value PT as paper thumbnail )
+.
+
+[ TEST-missing poster thumbnail ]
+for which D is it true that
+  ( the document D has the value PF as poster file ) and
+  ( the document D has no value PT as poster thumbnail )
+.
+
+[ TEST-missing presentation thumbnail ]
+for which D is it true that
+  ( the document D has the value PF as presentation file ) and
+  ( the document D has no value PT as presentation thumbnail )
+.
+
+[ TEST-unavailable thumbnail ]
+for which AD is it true that
+  ( the document AD has the value PT as paper thumbnail ) and
+  ( the value PT = '/ITA_static/images/papers/not_available.jpg' )
+order by AD.
+
+[ TEST-document is variant of itself ]
+for which AD is it true that
+  ( the document AD has the document AD as variant )
+order by AD.

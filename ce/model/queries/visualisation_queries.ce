@@ -1,0 +1,67 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+-- Used by home page
+[ last updated ]
+for which V1 and _F1 is it true that
+  ( the UI message V1 has the value _F1 as message text )
+.
+
+-- Used by co-authors wheel page (1a of 5)
+[ gov organisation details ]
+for which O, ON and C is it true that
+  ( the government organisation O has the value ON as name ) and
+  ( the government organisation O is a core organisation ) and
+  ( the government organisation O is affiliated to the country C )
+.
+
+-- Used by co-authors wheel page (1b of 5)
+[ ac organisation details ]
+for which O, ON and C is it true that
+  ( the academic organisation O has the value ON as name ) and
+  ( the academic organisation O is a core organisation ) and
+  ( the academic organisation O is affiliated to the country C )
+.
+
+-- Used by co-authors wheel page (1c of 5)
+[ ind organisation details ]
+for which O, ON and C is it true that
+  ( the industrial organisation O has the value ON as name ) and
+  ( the industrial organisation O is a core organisation ) and
+  ( the industrial organisation O is affiliated to the country C )
+.
+
+-- Used by co-authors wheel page (2 of 5)
+[ person details ]
+for which P, FN, SN, TC and CC is it true that
+  ( the published person P has the value FN as forename ) and
+  ( the published person P is a core person ) and
+  ( the published person P has the value SN as surname ) and
+  ( the published person P has the value TC as document count ) and ( the value TC > '0' ) and
+  ( the published person P has the value CC as co-author count ) and ( the value CC > '0' )
+order by TC, CC descending
+.
+
+-- Used by co-authors wheel page (3 of 5)
+[ published person -> organisation ]
+for which P and O is it true that
+  ( the published person P writes documents for the organisation O ) and
+  ( the published person P is a core person ) and
+  ( the published person P has the value C as co-author count ) and ( the value C > '0' )
+.
+
+-- Used by co-authors wheel page (4 of 5)
+[ person -> document ]
+for which P and AD is it true that
+  ( the published person P wrote the document AD ) and
+  ( the published person P is a core person ) and
+  ( the published person P has the value C as co-author count ) and ( the value C > '0' )
+.
+
+-- Used by co-authors wheel page (5 of 5)
+[ document details ]
+for which AD and T is it true that
+  ( the document AD has the value T as title )
+.

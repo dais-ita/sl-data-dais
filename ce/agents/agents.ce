@@ -1,0 +1,182 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+there is a rule executor agent named 'rules_for_orgs_1' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Orgs_1.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+--  has '1a-org type - academic' as rule name and
+--  has '1a-org type - industry' as rule name and
+--  has '1a-org type - government' as rule name and
+  has '1a-US organisation' as rule name and
+  has '1a-UK organisation' as rule name.
+
+there is a rule executor agent named 'rules_for_orgs_2' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Orgs_2.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has '2a-organisation employs' as rule name and
+  has '2a-organisation wrote document' as rule name and
+  has '2b-organisation document count' as rule name and
+  has '2b-organisation external document count' as rule name and
+  has '2b-organisation internal document count' as rule name and
+  has '2b-organisation journal paper count' as rule name and
+  has '2b-organisation patent count' as rule name and
+  has '2b-organisation conference paper count' as rule name and
+  has '2b-organisation external conference paper count' as rule name and
+  has '2b-organisation internal conference paper count' as rule name and
+  has '2b-organisation technical report count' as rule name and
+  has '2b-organisation other document count' as rule name and
+  has '2b-organisation citation count' as rule name.
+
+there is a rule executor agent named 'rules_for_people' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_People.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has '1a-person overall citation count' as rule name and
+  has '1a-person overall h-index' as rule name and
+  has '1a-ordered author author organisation' as rule name and
+  has '1b-person writes documents for' as rule name and
+  has '1c-core person' as rule name and
+  has '1c-academic person' as rule name and
+  has '1c-government person' as rule name and
+  has '1c-industry person' as rule name and
+  has '1c-US person' as rule name and
+  has '1c-UK person' as rule name.
+
+there is a rule executor agent named 'rules_for_projects_1' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Projects.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has '1a-project document' as rule name.
+
+there is a rule executor agent named 'rules_for_projects_2' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Projects_2.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has 'project-person statistics' as rule name and
+  has 'project-organisation statistics' as rule name and
+  has 'project statistic to project' as rule name and
+  has 'project-person statistic to person' as rule name and
+  has 'project-organisation statistic to organisation' as rule name and
+  has 'project number of documents' as rule name and
+  has 'project number of external documents' as rule name and
+  has 'project number of authors' as rule name and
+  has 'project number of organisations' as rule name and
+  has 'project citation count' as rule name and
+  has '1d-document to cross-project' as rule name and
+  has '1e-cross-project to document' as rule name.
+
+there is a rule executor agent named 'rules_for_events' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Events.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has '1a-event series comprises event' as rule name and
+  has '1a-event series years ran' as rule name and
+  has '1a-published event series' as rule name and
+  has '1a-event includes document' as rule name and
+  has '1a-published event' as rule name and
+  has '1a-count publications by event' as rule name and
+  has '1a-count publications by event series' as rule name and
+  has '1a-count external publications by event' as rule name and
+  has '1a-count external publications by event series' as rule name and
+  has '1a-sum citations by event' as rule name and
+  has '1a-sum citations by event series' as rule name.
+
+there is a rule executor agent named 'rules_for_authors_1' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Authors_1.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has '1b-person wrote document' as rule name and
+  has '1c-person document count' as rule name and
+  has '1c-person external document count' as rule name and
+  has '1c-person internal document count' as rule name and
+  has '1c-person journal paper count' as rule name and
+  has '1c-person patent count' as rule name and
+  has '1c-person conference paper count' as rule name and
+  has '1c-person external conference paper count' as rule name and
+  has '1c-person internal conference paper count' as rule name and
+  has '1c-person technical report count' as rule name and
+  has '1c-person other document count' as rule name and
+  has '1c-co-authors' as rule name and
+  has '1c-government document' as rule name and
+  has '1c-cross-project document' as rule name and
+  has '1d-inv co-author' as rule name and
+  has '1e-co-author statistics' as rule name and
+  has '1e-person co-author count' as rule name and
+  has '1e-person government co-author count' as rule name and
+  has '1f-person co-author statistics' as rule name.
+
+there is a rule executor agent named 'rules_for_authors_2' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Authors_2.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has '1d-person writes about topic' as rule name and
+  has '1d-person writes for project' as rule name.
+
+there is a rule executor agent named 'rules_for_dates' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Dates.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has '1a-final date from event' as rule name and
+  has '1b-final date from publish date' as rule name.
+
+there is a rule executor agent named 'rules_for_documents' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Documents.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has '1a-document number of citations' as rule name and
+  has '1a-document topics' as rule name and
+  has '1a-document variants' as rule name and
+  has '1b-document publication year' as rule name and
+  has '1c-document author count' as rule name.
+
+there is a rule executor agent named 'rules_for_topics' that
+  has 'com.ibm.ets.ita.ce.store.agents.general.RuleExecutor' as class name and
+  has 'true' as save CE to file and
+  has 'Rules_Topics.ce' as CE filename and
+  has 'true' as iterate and
+  has '10' as maximum iterations and
+  has 'false' as generate rationale and
+  has 'topic-person statistics' as rule name and
+  has 'topic-organisation statistics' as rule name and
+  has 'topic statistic to topic' as rule name and
+  has 'topic-person statistic to person' as rule name and
+  has 'topic-organisation statistic to organisation' as rule name and
+  has 'topic number of documents' as rule name and
+  has 'topic number of external documents' as rule name and
+  has 'topic number of authors' as rule name and
+  has 'topic number of organisations' as rule name and
+  has 'topic citation count' as rule name.

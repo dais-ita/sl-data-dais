@@ -1,0 +1,13 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+conceptualise a ~ topic ~ T that
+  has the value M as ~ marker ~ and
+  has the topic statistic TS as ~ topic statistic ~ and
+  has the value ND as ~ number of documents ~ and
+  has the value NE as ~ number of external documents ~ and
+  has the value NA as ~ number of authors ~ and
+  has the value NO as ~ number of organisations ~ and
+  has the value CC as ~ citation count ~.

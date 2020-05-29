@@ -1,0 +1,90 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+[ 1a-event series comprises event ]
+if
+  ( the event E is part of the event series ES )
+then
+  ( the event series ES comprises the event E )
+.
+
+[ 1a-event series years ran ]
+if
+  ( the event #E is part of the event series ES )
+then
+  ( the event series ES has #E as years ran )
+.
+
+[ 1a-published event series ]
+if
+  ( there is an event series named ES ) and
+  ( the event E is part of the event series ES ) and
+  ( the document AD has the event E as venue )
+then
+  ( the event series ES is a published event series )
+.
+
+[ 1a-event includes document ]
+if
+  ( the document D has the event E as venue )
+then
+  ( the event E includes the document D )
+.
+
+[ 1a-published event ]
+if
+  ( the document AD has the event E as venue )
+then
+  ( the event E is a published event )
+.
+
+[ 1a-count publications by event ]
+if
+  ( the document #AD has the event E as venue )
+then
+  ( the event E has #AD as paper count )
+.
+
+[ 1a-count external publications by event ]
+if
+  ( the external document #AD has the event E as venue )
+then
+  ( the event E has #AD as external paper count )
+.
+
+[ 1a-count publications by event series ]
+if
+  ( the event E is part of the event series ES ) and
+  ( the document #AD has the event E as venue )
+then
+  ( the event series ES has #AD as paper count )
+.
+
+[ 1a-count external publications by event series ]
+if
+  ( the event E is part of the event series ES ) and
+  ( the external document #AD has the event E as venue )
+then
+  ( the event series ES has #AD as external paper count )
+.
+
+[ 1a-sum citations by event ]
+if
+  ( the document AD has the event E as venue ) and
+  ( the document AD has the latest paper citation count PC as citation count ) and
+  ( the latest paper citation count PC has the value @CC as citation count )
+then
+  ( the event E has the value @CC as citation count )
+.
+
+[ 1a-sum citations by event series ]
+if
+  ( the document AD has the event E as venue ) and
+  ( the event E is part of the event series ES ) and
+  ( the document AD has the latest paper citation count PC as citation count ) and
+  ( the latest paper citation count PC has the value @CC as citation count )
+then
+  ( the event series ES has the value @CC as citation count )
+.

@@ -1,0 +1,37 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+conceptualise a ~ project plan ~ I that
+  has the value CN as ~ code name ~ and
+  ~ ran during ~ the year Y.
+
+conceptualise a ~ technical area ~ I that
+  has the value CN as ~ code name ~ and
+  has the value NA as ~ name ~ and
+  has the project plan PP as ~ project plan ~.
+
+conceptualise a ~ project ~ I that
+  has the value CN as ~ code name ~ and
+  has the value NA as ~ name ~ and
+  has the document D as ~ paper ~ and
+  has the project plan PP as ~ project plan ~ and
+  has the technical area TA as ~ technical area ~ and
+  ~ is part of ~ the consolidated project P and
+  has the project statistic PS as ~ project statistic ~ and
+  has the value ND as ~ number of documents ~ and
+  has the value NE as ~ number of external documents ~ and
+  has the value NA as ~ number of authors ~ and
+  has the value NO as ~ number of organisations ~ and
+  has the value CC as ~ citation count ~.
+
+conceptualise a ~ consolidated project ~ P that
+  has the value T as ~ title ~ and
+  ~ corresponds to ~ the technical area T and
+  ~ ran during ~ the year Y.
+
+--Define the single mandatory project instance
+there is a project named 'Cross-project' that
+  has 'Cross-project collaborations' as name and
+  has 'Cross-project' as code name.

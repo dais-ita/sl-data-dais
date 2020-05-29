@@ -1,0 +1,107 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+[ 1a-project document ]
+if
+  ( the document AD has the project P as project )
+then
+  ( the project P has the document AD as paper )
+.
+
+[ project-person statistics ]
+if
+  ( the document D has the project PR as project ) and
+  ( the person P wrote the document D )
+then
+  ( there is a project-person statistic named PPS_#project-person-stat:_$PR_#-_$P ) and
+  ( the project-person statistic PPS has the project PR as project ) and
+  ( the project-person statistic PPS has the person P as person ) and
+  ( the project-person statistic PPS has the document D as document )
+.
+
+[ project-organisation statistics ]
+if
+  ( the document D has the project PR as project ) and
+  ( the person P wrote the document D ) and
+  ( the person P writes documents for the organisation O )
+then
+  ( there is an project-organisation statistic named POS_#project-org-stat:_$PR_#-_$O ) and
+  ( the project-organisation statistic POS has the project PR as project ) and
+  ( the project-organisation statistic POS has the organisation O as organisation ) and
+  ( the project-organisation statistic POS has the document D as document )
+.
+
+[ project statistic to project ]
+if
+  ( the project statistic PS has the project PR as project )
+then
+  ( the project PR has the project statistic PS as project statistic )
+.
+
+[ project-person statistic to person ]
+if
+  ( the project-person statistic PPS has the person P as person )
+then
+  ( the person P has the project-person statistic PPS as project-person statistic )
+.
+
+[ project-organisation statistic to organisation ]
+if
+  ( the project-organisation statistic POS has the organisation O as organisation )
+then
+  ( the organisation O has the project-organisation statistic POS as project-organisation statistic )
+.
+
+[ project number of documents]
+if
+  ( the document #AD has the project P as project )
+then
+  ( the project P has the value #AD as number of documents )
+.
+
+[ project number of external documents]
+if
+  ( the external document #AD has the project P as project )
+then
+  ( the project P has the value #AD as number of external documents )
+.
+
+[ project number of authors ]
+if
+  ( the person #P writes for the project PR )
+then
+  ( the project PR has the value #P as number of authors )
+.
+
+[ project number of organisations ]
+if
+  ( the project-organisation statistic POS has the organisation #O as organisation ) and
+  ( the project-organisation statistic POS has the project P as project ) and
+then
+  ( the project P has the value #O as number of organisations )
+.
+
+[ project citation count ]
+if
+  ( the document AD has the project P as project ) and
+  ( the document AD has the latest paper citation count PC as citation count ) and
+  ( the latest paper citation count PC has the value @CC as citation count )
+then
+  ( the project P has the value @CC as citation count )
+.
+
+[ 1d-document to cross-project ]
+if
+  ( there is a cross-project document named D )
+then
+  ( the project 'Cross-project' has the cross-project document D as paper )
+.
+
+[ 1e-cross-project to document ]
+if
+  ( there is a cross-project document named D )
+then
+  ( the cross-project document D has the project 'Cross-project' as project )
+.

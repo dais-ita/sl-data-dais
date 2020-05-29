@@ -1,0 +1,21 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+[ 1a-final date from event ]
+if
+  ( the document AD has no date D as final date ) and
+  ( the document AD has the event E as venue ) and
+  ( the event E corresponds to the date ED )
+then
+  ( the document AD has the date ED as final date )
+.
+
+[ 1b-final date from publish date ]
+if
+  ( the document AD has the date PD as publish date ) and
+  ( the document AD has no date D as final date )
+then
+  ( the document AD has the date PD as final date )
+.

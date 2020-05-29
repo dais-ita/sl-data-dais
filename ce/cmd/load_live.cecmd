@@ -1,0 +1,20 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+--perform reset store with starting uid '1'.
+-- Load Hudson
+perform load sentences from url './hudson/ce/cmd/load_hudson.cecmd'.
+
+-- Load the models
+perform load sentences from url '/sl-data-dais/ce/cmd/all_models.cecmd'.
+
+-- Load the generated facts
+perform load sentences from url '/sl-data-dais/ce/cmd/all_facts_generated.cecmd'.
+
+-- Run the live rules
+perform load sentences from url '/sl-data-dais/ce/cmd/all_live_rules.cecmd'.
+
+--Load the hudson meta-data
+perform load sentences from url '/sl-data-dais/ce/facts/hudson_metadata.ce'.

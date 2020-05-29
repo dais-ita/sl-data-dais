@@ -1,0 +1,18 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+-- Run the rules
+perform run the rule executor agent named 'rules_for_orgs_1'.
+perform run the rule executor agent named 'rules_for_people'.
+perform run the rule executor agent named 'rules_for_projects_1'.
+perform run the rule executor agent named 'rules_for_authors_1'.
+perform run the rule executor agent named 'rules_for_dates'.
+perform run the rule executor agent named 'rules_for_documents'.
+perform run the rule executor agent named 'rules_for_authors_2'.
+perform run the rule executor agent named 'rules_for_events'.
+perform run the rule executor agent named 'rules_for_topics'.
+
+perform run the rule executor agent named 'rules_for_orgs_2'.
+perform run the rule executor agent named 'rules_for_projects_2'.

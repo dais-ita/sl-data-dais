@@ -1,0 +1,133 @@
+-- --------------------------------------------------------------------------
+-- (C) Copyright IBM Corporation 2016, 2018
+-- All Rights Reserved
+-- --------------------------------------------------------------------------
+
+--[ 1a-org type - academic ]
+--if
+--  ( the organisation O is an academic organisation )
+--then
+--  ( the organisation O has 'AC' as type )
+--.
+
+--[ 1a-org type - industry ]
+--if
+--  ( the organisation O is an industrial organisation )
+--then
+--  ( the organisation O has 'IND' as type )
+--.
+
+--[ 1a-org type - government ]
+--if
+--  ( the organisation O is a government organisation )
+--then
+--  ( the organisation O has 'GOV' as type )
+--.
+
+[ 1a-US organisation ]
+if
+  ( the organisation O is affiliated to the country 'US' )
+then
+  ( the organisation O is a US organisation )
+.
+
+[ 1a-UK organisation ]
+if
+  ( the organisation O is affiliated to the country 'UK' )
+then
+  ( the organisation O is a UK organisation )
+.
+
+[ 2a-organisation employs ]
+if
+  ( the person P writes documents for the organisation O )
+then
+  ( the organisation O employs the person P )
+.
+
+[ 2a-organisation wrote document ]
+if
+  ( the organisation O employs the person P ) and
+  ( the person P wrote the document AD )
+then
+  ( the published organisation O wrote the document AD )
+.
+
+[ 2b-organisation document count ]
+if
+  ( the organisation O wrote the document #D )
+then
+  ( the organisation O has #D as document count )
+.
+
+[ 2b-organisation external document count ]
+if
+  ( the organisation O wrote the external document #ED )
+then
+  ( the organisation O has #ED as external document count )
+.
+
+[ 2b-organisation internal document count ]
+if
+  ( the organisation O wrote the internal document #ID )
+then
+  ( the organisation O has #ID as internal document count )
+.
+
+[ 2b-organisation journal paper count ]
+if
+  ( the organisation O wrote the journal paper #J )
+then
+  ( the organisation O has #J as journal paper count )
+.
+
+[ 2b-organisation patent count ]
+if
+  ( the organisation O wrote the patent #P )
+then
+  ( the organisation O has #P as patent count )
+.
+
+[ 2b-organisation conference paper count ]
+if
+  ( the organisation O wrote the conference paper #P )
+then
+  ( the organisation O has #P as conference paper count )
+.
+
+[ 2b-organisation external conference paper count ]
+if
+  ( the organisation O wrote the external conference paper #P )
+then
+  ( the organisation O has #P as external conference paper count )
+.
+
+[ 2b-organisation internal conference paper count ]
+if
+  ( the organisation O wrote the internal conference paper #P )
+then
+  ( the organisation O has #P as internal conference paper count )
+.
+
+[ 2b-organisation technical report count ]
+if
+  ( the organisation O wrote the technical report #TR )
+then
+  ( the organisation O has #TR as technical report count )
+.
+
+[ 2b-organisation other document count ]
+if
+  ( the organisation O wrote the other document #OD )
+then
+  ( the organisation O has #OD as other document count )
+.
+
+[ 2b-organisation citation count ]
+if
+  ( the organisation O wrote the document AD ) and
+  ( the document AD has the latest paper citation count PC as citation count ) and
+  ( the latest paper citation count PC has the value @CC as citation count )
+then
+  ( the organisation O has the value @CC as citation count )
+.
